@@ -423,6 +423,7 @@
                     font-size: 14px;
                     font-weight: 300;
                     margin-bottom: 30px;
+                    margin-top: 0;
                     @include media-breakpoint-for(mobile) {
                         margin-bottom: 18px;
                     }
