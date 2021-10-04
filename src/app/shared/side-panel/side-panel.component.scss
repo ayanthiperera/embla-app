@@ -25,17 +25,15 @@
             > li {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: nowrap;
                 margin-bottom: 1px;
                 > a {
                     font-size: 14px;
                     padding: 15px 20px;
                     width: 100%;
-                    cursor: pointer;
-                    flex-wrap: nowrap;
-                    flex-direction: row;
-                    display: flex;
                     align-items: center;
+                    display: grid;
+                    grid-template-columns: 40px  auto;
+                    position: relative;
                     &:hover {
                         transition: 0.3s;
                         background-color: var(--light-gray);
@@ -44,21 +42,25 @@
                         transition: 0.3s;
                         background-color: var(--light-gray);
                     }
-                    fa-icon {
+                    .menu-icon {
                         font-size: 25px;
-                        width: 30px;
+                        width: 40px;
                     }
                     .text {
                         display: inline-block;
+                        opacity: 1;
+                        transition: 0.9s;
                     }
                     .chevron {
                         flex: 1;
                         font-size: 18px;
-                        display: flex;
-                        justify-content: flex-end;
+                        position: absolute;
+                        right: 20px;
+                        opacity: 1;
+                        transition: 0.9s;
                     }
                 }
-                > ul {
+                > ul.inside-menu {
                     list-style: none;
                     width: 100%;
                     padding-left: 90px;
@@ -66,13 +68,13 @@
                     > li {
                         display: flex;
                         flex-direction: row;
-                        flex-wrap: nowrap;
                         margin-bottom: 1px;
                         > a {
                             font-size: 14px;
                             padding: 15px;
                             width: 100%;
-                            cursor: pointer;
+                            cursor: pointer;     
+                            display: grid;
                             &:hover {
                                 transition: 0.3s;
                                 background-color: var(--light-gray);
@@ -99,44 +101,45 @@
             > li {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: nowrap;
+                margin-bottom: 1px;
                 > a {
                     font-size: 14px;
                     padding: 15px 20px;
                     width: 100%;
-                    cursor: pointer;
-                    cursor: auto;
-                    text-align: center;
-                    flex-wrap: nowrap;
-                    flex-direction: row;
-                    display: flex;
+                    cursor: default;
+                    display: grid;
+                    grid-template-columns: 40px auto;
+                    position: relative;
                     align-items: center;
                     &.selected {
                         background-color: var(--light-gray);
                     }
-                    fa-icon {
+                    .menu-icon {
                         font-size: 25px;
-                        width: 30px;
+                        width: 40px;
                     }
                     .text {
-                        display: none;
+                        display: flex;
                         opacity: 0;
+                        transition: 0.5s;
                     }
                     .chevron {
-                        display: none;
+                        display: block;
                         flex: 1;
                         font-size: 18px;
-                        justify-content: flex-end;
+                        position: absolute;
+                        right: 20px;
+                        opacity: 0;
                     }
                 }
-                > ul {
+                > ul.inside-menu {
                     display: none;
                     width: 100%;
                     padding-left: 90px;
                     > li {
                         display: flex;
                         flex-direction: row;
-                        flex-wrap: nowrap;
+                        margin-bottom: 1px;
                         > a {
                             font-size: 14px;
                             padding: 15px;

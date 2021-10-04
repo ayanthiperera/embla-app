@@ -17,25 +17,25 @@
     <div>
         <ul class="side-menu">
             <li><a class="selected">
-                    <fa-icon [icon]="faHome"></fa-icon><span class="text">Home</span>
+                    <fa-icon [icon]="faHome" class="menu-icon"></fa-icon><span class="text">Home</span>
                 </a></li>
 
             <li><a (click)="showHideLinkOne()">
-                    <fa-icon [icon]="faFileAlt"></fa-icon><span class="text">Report</span>
+                    <fa-icon [icon]="faFileAlt" class="menu-icon"></fa-icon><span class="text">Report</span>
                     <fa-icon [icon]="faChevronDown" class="chevron"></fa-icon>
                 </a></li>
             <li *ngIf="showLinkOne">
-                <ul>
+                <ul class="inside-menu">
                     <li><a><span class="text">Payment report</span></a></li>
                     <li><a><span class="text">Employee report</span></a></li>
                 </ul>
             </li>
             <li><a (click)="showHideLinkTwo()">
-                    <fa-icon [icon]="faUserFriends"></fa-icon><span class="text">Administration</span>
+                    <fa-icon [icon]="faUserFriends" class="menu-icon"></fa-icon><span class="text">Administration</span>
                     <fa-icon [icon]="faChevronDown" class="chevron"></fa-icon>
                 </a></li>
             <li *ngIf="showLinkTwo">
-                <ul>
+                <ul class="inside-menu">
                     <li><a><span class="text">Customer</span></a></li>
                     <li><a><span class="text">User</span></a></li>
                     <li><a><span class="text">Permission</span></a></li>
